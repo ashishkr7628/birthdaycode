@@ -1,0 +1,127 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+}
+
+/* Heading */
+#heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+/* Message Section */
+.message {
+  font-size: 1.2rem;
+  margin: 20px auto;
+  max-width: 700px;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+/* Slideshow */
+.slideshow {
+  margin-top: 30px;
+}
+
+.slideshow img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: cover;
+  border: 6px solid white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  animation: fade 2s infinite;
+}
+
+/* Button */
+button {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #ee9ca7;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Canvas Confetti */
+canvas#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  #heading {
+    font-size: 2rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #heading {
+    font-size: 1.6rem;
+  }
+
+  .message {
+    font-size: 0.95rem;
+  }
+
+  .slideshow img {
+    max-width: 90%;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
